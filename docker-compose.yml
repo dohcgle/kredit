@@ -34,7 +34,7 @@ services:
       context: .
     volumes:
       - ./cats:/app/src/cats
-    command: [ 'celery', '--workdir=./', '-A', 'kredit', 'worker' ]
+    command: [ 'celery', '--workdir=.', '-A', 'kredit', 'worker' ]
 
 volumes:
   static_volume:
