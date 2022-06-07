@@ -28,13 +28,13 @@ services:
       - web
 
 
-  worker:
-    restart: always
-    build:
-      context: .
-    volumes:
-      - ./cats:/app/src/cats
-    command: [ 'celery', '--workdir=.', '-A', 'kredit', 'worker' ]
+#  worker:
+#    restart: always
+#    build:
+#      context: .
+#    volumes:
+#      - ./cats:/app/src/cats
+#    command: [ 'celery', '--workdir=.', '-A', 'kredit', 'worker' ]
 
 volumes:
   static_volume:
