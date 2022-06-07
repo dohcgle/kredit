@@ -33,8 +33,8 @@ services:
     build:
       context: .
     volumes:
-      - ./cats:/app/src/cats
-    command: [ 'celery', '--workdir=.', '-A', 'kredit', 'worker' ]
+      - ./media:/app/media
+    command: [ 'celery', '--workdir=./', '-A', 'kredit', 'worker' ]
 
 volumes:
   static_volume:
